@@ -127,11 +127,22 @@ Help Guide:
 - ### Explain how the code works and what parts are responsible for running the program.
   
   ```bash
-  1. __init__(self)
-- 1. Initializes the main application, setting up the GUI, window size, and appearance.
-  ```bash
-  2. create_widgets(self)
-- 2. Creates and places all interactive elements in the main application window, including buttons and labels.
+  1. __init__(self) - Initializes the main application, setting up the GUI, window size, and appearance.
+  2. create_widgets(self) - Creates and places all interactive elements in the main application window, including buttons and labels.
+  3. start_game(self) - Validates user input for the number of questions and launches the quiz game.
+  4. check_answer(self) - Compares the user’s input with the correct answer, providing feedback and updating the score.
+  5. ask_question(self) - Generates a new question and updates the UI accordingly.
+  6. display_final_score(self) - Shows the user’s final score after completing the quiz and provides options to retake the quiz or explore the periodic table.
+
+---
+
+### 
+Thank You for Using Elemental Explorer!
+
+We sincerely appreciate you choosing Elemental Explorer as your chemistry learning tool. We hope it has helped you explore and enjoy the fascinating world of elements. Whether you're studying, teaching, or simply curious, we're glad to have been part of your learning journey. Keep exploring, and don't hesitate to return for more fun with the periodic table!
+
+Happy learning!
+
   
 
 
