@@ -4,37 +4,26 @@
 
 ## I. Project Overview
 
-The provided code is a Python application built using the Tkinter library for creating graphical user interfaces (GUIs). It serves as the foundation for the Elemental Explorer, a quiz-based periodic table learning tool. The code implements a structured, interactive framework that manages different aspects of the user experience, from data handling to interface interactions. It includes two main features:
-
-1. **Periodic Table Viewer**: View and explore detailed information about chemical elements, their properties, and their positions in the periodic table.
-2. **Periodic Table Game**: A quiz-style game that challenges users to answer questions about element symbols and atomic numbers, promoting learning through play.
-
-Elemental Explorer aims to make learning chemistry fun and accessible, catering to students, educators, and enthusiasts alike.
+The Periodic Table Game is an interactive educational game designed to test users' knowledge of the periodic table. The game focuses on questions related to the symbols and atomic numbers of chemical elements, providing immediate feedback on the correctness of users' answers. Using Java’s Swing library for the graphical user interface (GUI), the game offers an easy-to-use, engaging interface for learning. It aims to reinforce chemistry concepts in a fun and interactive manner, suitable for students, teachers, and anyone interested in enhancing their knowledge of the periodic table.
 
 ---
 
-## II. Python Concepts, Libraries, and Features
+## II. Object-Oriented Programming (OOP) Principles
 
-This project demonstrates the following Python concepts and libraries:
+This project demonstrates key Object-Oriented Programming principles:
 
-1. **Tkinter GUI**:
-   - A user-friendly graphical interface with buttons, labels, and entry fields for intuitive navigation.
-   - Icons and custom styles to enhance user experience.
-   - Canvas graphics for displaying the periodic table.
+1. **Encapsulation**:
+   - The Element class encapsulates the properties of a chemical element, such as its symbol and atomic number. These properties are protected by private fields and accessed through public methods to ensure data integrity.
+   - The PeriodicTableGame class manages the game state (e.g., current score, question number) privately, interacting with these states using public methods such as askQuestion() and checkAnswer().
+2. **Inheritance**:
+   - Although the current implementation doesn’t require inheritance, the design allows for future extensions. For example, additional subclasses could be created to handle different categories of questions or advanced game modes, inheriting core behaviors from the PeriodicTableGame class.
 
-2. **Random Library**:
-   - Generates random questions for diverse gameplay.
+3. **Polymorphism**:
+   - Polymorphism is demonstrated with method overriding. For example, the SubmitButtonListener and NextQuestionButtonListener classes implement the ActionListener interface, providing different behaviors when their respective buttons are clicked.
 
-3. **Object-Oriented Programming (OOP)**:
-   - Encapsulation of application functionality into classes and methods for modularity and reusability.
-
-4. **Error Handling and Input Validation**:
-   - Ensures users provide valid inputs before proceeding:
-     - Displays prompts for incomplete fields, such as missing number of questions.
-     - Prevents invalid entries like numbers outside the range of 1–100.
-
-5. **Dynamic Feedback**:
-   - Provides real-time feedback for quiz answers, such as correct/incorrect responses and the final score.
+4. **Abstraction**:
+   - The Element class serves as an abstract representation of a chemical element, exposing only essential properties like symbol and atomic number, while hiding implementation details.
+   - The PeriodicTableGame class abstracts the game logic behind methods like askQuestion(), checkAnswer(), and displayFinalScore(), simplifying interaction for the user.
 
 ---
 
@@ -59,46 +48,45 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
 ## IV. Instructions for Running the Program
 
 ### Prerequisites:
-- **Python 3.9** or later installed on your machine.
-- The following dependencies must be installed (pre-installed with Python):
-  - `tkinter`
-  - `random`
-- Ensure the image file `Icon.ico` is placed in the `src/` directory.
+- **PJava Development Kit (JDK) version 8** or higher.
+- A compatible IDE or text editor such as IntelliJ IDEA, Eclipse, or Visual Studio Code.
 
 ### Steps to Run:
 
 1. **Clone or Download the Repository**:
    ```bash
-   git clone https://github.com/your-repository-name/Elemental-Explorer.git
-   cd Elemental-Explorer
-2. **Run the Game**:
-- Launch the game by running the following command:
+   git clone https://github.com/your-username/periodic-table-game.git
+   cd periodic-table-game
+2. **Compile the Java Files (if not using an IDE):**:
    ```bash
-   python src/gameGUI.py
-- Play the game by answering questions about the periodic table. The score is displayed at the end, with options to retake the quiz or explore the periodic table.
-3. **Access the Periodic Table Viewer**:
-- Run the following command:
-  ```bash
-  python src/periodicTableGUI.py
-4. **Use the Help Guide**:
-- Learn how to navigate the program by running:
-  ```bash
-  python src/helpGuide.py
+   javac PeriodicTableGame.java
+3. **Run the Game:**:
+   ```bash
+   java PeriodicTableGame
+- The game window will appear, where you can begin answering questions about chemical elements.
+
+### Game Controls:
+- **Submit**: Submit your answer to the current question.
+- **Next Question**: Move to the next question after submitting your answer.
+- **Retry**: Retake the game after viewing your final score.
+- **Study Area**: View the periodic table for reference (opens in a new window).
+- **Help**: View the game instructions and rules.
 
 ---
 
 ## V. Folder Structure
 - Follow the Folder Structure to fully utilize the program
   ```bash
-  Project/
-   │
-   ├── src/
-   │   ├── gameGUI.py             # Main game file
-   │   ├── periodicTableGUI.py    # Periodic table viewer
-   │   ├── Icon.ico               # Application icon
-   │   ├── helpGuide.py           # Help guide for users
-   │
-   └── README.md                  # This README file
+    Periodic-Table-Game/
+    │
+    ├── src/
+    │   ├── PeriodicTableGame.java   # Main game file
+    │   ├── Element.java             # Class representing elements
+    │   ├── StudyArea.java          # Displays the periodic table
+    │   ├── HelpGuide.java          # Provides help and instructions
+    │
+    └── README.md                   # This README file
+
 
 ---
 
@@ -106,18 +94,20 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
 
 ### Periodic Table Game:
 Gameplay:
-- Answer up to 100 multiple-choice questions about chemical elements.
-- Questions focus on element symbols and atomic numbers, chosen randomly.
+- Answer questions on the atomic number and symbol of chemical elements.
+- Questions are randomly selected, providing diverse gameplay each time.
+
 Feedback:
-- Displays correct answers for wrong responses and tracks scores.
+- Immediate feedback on the correctness of answers.
+- Displays a final score after completing all questions.
 
 ### Periodic Table Viewer:
 Interactive Table:
-- Clickable elements provide detailed properties (e.g., atomic number, weight, and category).
+- View and explore detailed information about elements (atomic number, symbol, weight, and category).
 Educational Information:
 - Categorizes elements by groups and periods, highlighting their properties and states.
-Retry and Explore Options:
-- Replay the game or switch to the Study Area after completing the game.
+Study Area:
+- Access the periodic table for reference during gameplay.
 Help Guide:
 - Offers detailed instructions for using the application.
 
@@ -127,18 +117,18 @@ Help Guide:
 - ### Explain how the code works and what parts are responsible for running the program.
   
   ```bash
-  1. __init__(self) - Initializes the main application, setting up the GUI, window size, and appearance.
-  2. create_widgets(self) - Creates and places all interactive elements in the main application window, including buttons and labels.
-  3. start_game(self) - Validates user input for the number of questions and launches the quiz game.
-  4. check_answer(self) - Compares the user’s input with the correct answer, providing feedback and updating the score.
-  5. ask_question(self) - Generates a new question and updates the UI accordingly.
-  6. display_final_score(self) - Shows the user’s final score after completing the quiz and provides options to retake the quiz or explore the periodic table.
-
+  __init__(self): Initializes the game, setting up the GUI window, layout, and appearance.
+  create_widgets(self): Creates and places all interactive elements in the GUI window.
+  start_game(self): Validates user input (number of questions) and starts the quiz.
+  check_answer(self): Compares user input with the correct answer, updating the score and providing feedback.
+  ask_question(self): Randomly selects a new question and updates the user interface.
+  display_final_score(self): Shows the user’s final score after the quiz and provides options to retry or explore the periodic table.
+  
 ---
 
 ### Thank You for Using Elemental Explorer!
 
-We sincerely appreciate you choosing Elemental Explorer as your chemistry learning tool. We hope it has helped you explore and enjoy the fascinating world of elements. Whether you're studying, teaching, or simply curious, we're glad to have been part of your learning journey. Keep exploring, and don't hesitate to return for more fun with the periodic table!
+We sincerely appreciate you choosing the Periodic Table Game as your learning tool. We hope it has helped you explore and enjoy the fascinating world of elements. Keep learning and feel free to return anytime for more fun with the periodic table!
 
 ### Happy learning!
 
