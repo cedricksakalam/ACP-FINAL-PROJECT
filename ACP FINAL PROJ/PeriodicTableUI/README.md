@@ -104,14 +104,14 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
 
 ## VI. Key Features
 
-###Periodic Table Game:
+### Periodic Table Game:
 Gameplay:
 - Answer up to 100 multiple-choice questions about chemical elements.
 - Questions focus on element symbols and atomic numbers, chosen randomly.
 Feedback:
 - Displays correct answers for wrong responses and tracks scores.
 
-###Periodic Table Viewer:
+### Periodic Table Viewer:
 Interactive Table:
 - Clickable elements provide detailed properties (e.g., atomic number, weight, and category).
 Educational Information:
@@ -121,4 +121,19 @@ Retry and Explore Options:
 Help Guide:
 - Offers detailed instructions for using the application.
 
+---
+
 ## VII. Explanation of Key Functions
+- ### Explain how the code works and what parts are responsible for running the program.
+  ```bash
+  __init__(self)
+- Initializes the main application, setting up the GUI, window size, and appearance.
+  ```bash
+  create_widgets(self)
+- Creates and places all interactive elements in the main application window, including buttons and labels.
+  
+
+
+
+
+  
