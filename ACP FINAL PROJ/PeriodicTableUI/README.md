@@ -125,12 +125,13 @@ Help Guide:
 
 ## VII. Explanation of Key Functions
 - ### Explain how the code works and what parts are responsible for running the program.
+  
   ```bash
-  __init__(self)
-- Initializes the main application, setting up the GUI, window size, and appearance.
+  1. __init__(self)
+- 1. Initializes the main application, setting up the GUI, window size, and appearance.
   ```bash
-  create_widgets(self)
-- Creates and places all interactive elements in the main application window, including buttons and labels.
+  2. create_widgets(self)
+- 2. Creates and places all interactive elements in the main application window, including buttons and labels.
   
 
 
