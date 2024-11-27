@@ -1,13 +1,13 @@
-> Elemental Explorer README
+Elemental Explorer README
 
- I. Project Overview
+ I. *Project Overview*
   Elemental Explorer is an interactive and educational application designed to enhance knowledge about the periodic table and its elements.
     It includes two main features:
 
     Periodic Table Viewer: View and explore detailed information about chemical elements, their properties, and their positions in the periodic table.
     Periodic Table Game: A quiz-style game that challenges users to answer questions about element symbols and atomic numbers, promoting learning through play.
 
- II. Python Concepts, Libraries, and Applications
+ II. *Python Concepts, Libraries, and Applications*
   This project leverages core Python programming concepts and libraries, such as:
 
     1. Tkinter: The GUI toolkit used to create an interactive and visually appealing user interface.
@@ -16,7 +16,7 @@
     4. Custom Widgets: Integration of buttons, labels, and other GUI elements for seamless navigation.
     5. Canvas and Graphics: Displaying a periodic table background and interactive elements.
 
- III. Chosen SDG and Its Integration
+ III. *Chosen SDG and Its Integration*
    The project aligns with Sustainable Development Goal (SDG) 4: Quality Education by providing an engaging and innovative platform for science education. Through the game mode, learners can test their understanding of chemistry fundamentals, and the periodic table viewer enables users to explore detailed properties of elements in an interactive way.
 
  IV. Instructions for Running the Program
@@ -26,7 +26,7 @@
      > tkinter (usually included in the standard Python library).
    3. Ensure the image files (Icon.ico and background1.png) are located in the specified directories.
 
-  Running the Application
+  *Running the Application*
    1. Main Application - The Game
     - Launch the game by running the following command in your terminal or IDE:
       python MainGameGUI.py
@@ -36,7 +36,7 @@
       python PeriodicTableViewer.py
       - Click on any element in the table to learn about its atomic number, weight, state, and category.
 
- Folder Structure
+ *Folder Structure*
 
   Project/
   │
@@ -47,7 +47,7 @@
   │   ├── background1.png         # Background image for the game
   │
   └── README.md                   # This README file
-  Key Features
+  *Key Features*
     1. Periodic Table Game
     Gameplay:
       Users answer 25 multiple-choice questions about chemical elements.
