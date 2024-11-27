@@ -71,3 +71,34 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
    ```bash
    git clone https://github.com/your-repository-name/Elemental-Explorer.git
    cd Elemental-Explorer
+2. **Run the Game**:
+- Launch the game by running the following command:
+   ```bash
+   python src/gameGUI.py
+- Play the game by answering questions about the periodic table. The score is displayed at the end, with options to retake the quiz or explore the periodic table.
+3. **Access the Periodic Table Viewer**:
+- Run the following command:
+  ```bash
+  python src/periodicTableGUI.py
+4. **Use the Help Guide**:
+- Learn how to navigate the program by running:
+  ```bash
+  python src/helpGuide.py
+
+  ---
+
+## V. Folder Structure
+```bash
+Project/
+│
+├── src/
+│   ├── gameGUI.py             # Main game file
+│   ├── periodicTableGUI.py    # Periodic table viewer
+│   ├── Icon.ico               # Application icon
+│   ├── helpGuide.py           # Help guide for users
+│
+└── README.md                  # This README file
+
+ VI. Key Features
+
+
