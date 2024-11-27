@@ -1,6 +1,6 @@
-Elemental Explorer README
+#Elemental Explorer README
 
- I. *Project Overview*
+##I. *Project Overview*
   Elemental Explorer is an interactive and educational application designed to enhance knowledge about the periodic table and its elements.
     It includes two main features:
 
