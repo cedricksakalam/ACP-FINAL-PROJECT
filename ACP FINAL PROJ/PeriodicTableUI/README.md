@@ -85,20 +85,40 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
   ```bash
   python src/helpGuide.py
 
-  ---
+---
 
 ## V. Folder Structure
-```bash
-Project/
-│
-├── src/
-│   ├── gameGUI.py             # Main game file
-│   ├── periodicTableGUI.py    # Periodic table viewer
-│   ├── Icon.ico               # Application icon
-│   ├── helpGuide.py           # Help guide for users
-│
-└── README.md                  # This README file
+- Follow the Folder Structure to fully utilize the program
+  ```bash
+  Project/
+   │
+   ├── src/
+   │   ├── gameGUI.py             # Main game file
+   │   ├── periodicTableGUI.py    # Periodic table viewer
+   │   ├── Icon.ico               # Application icon
+   │   ├── helpGuide.py           # Help guide for users
+   │
+   └── README.md                  # This README file
 
- VI. Key Features
+---
 
+## VI. Key Features
 
+###Periodic Table Game:
+Gameplay:
+- Answer up to 100 multiple-choice questions about chemical elements.
+- Questions focus on element symbols and atomic numbers, chosen randomly.
+Feedback:
+- Displays correct answers for wrong responses and tracks scores.
+
+###Periodic Table Viewer:
+Interactive Table:
+- Clickable elements provide detailed properties (e.g., atomic number, weight, and category).
+Educational Information:
+- Categorizes elements by groups and periods, highlighting their properties and states.
+Retry and Explore Options:
+- Replay the game or switch to the Study Area after completing the game.
+Help Guide:
+- Offers detailed instructions for using the application.
+
+## VII. Explanation of Key Functions
