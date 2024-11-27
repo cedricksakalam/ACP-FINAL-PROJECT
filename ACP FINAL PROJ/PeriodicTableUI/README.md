@@ -136,12 +136,11 @@ Help Guide:
 
 ---
 
-### 
-Thank You for Using Elemental Explorer!
+### Thank You for Using Elemental Explorer!
 
 We sincerely appreciate you choosing Elemental Explorer as your chemistry learning tool. We hope it has helped you explore and enjoy the fascinating world of elements. Whether you're studying, teaching, or simply curious, we're glad to have been part of your learning journey. Keep exploring, and don't hesitate to return for more fun with the periodic table!
 
-Happy learning!
+### Happy learning!
 
   
 
