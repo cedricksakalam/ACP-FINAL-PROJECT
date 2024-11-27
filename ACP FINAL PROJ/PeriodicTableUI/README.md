@@ -4,7 +4,7 @@
 
 ## I. Project Overview
 
-Elemental Explorer is an interactive and educational application designed to enhance knowledge about the periodic table and its elements. It includes two main features:
+The provided code is a Python application built using the Tkinter library for creating graphical user interfaces (GUIs). It serves as the foundation for the Elemental Explorer, a quiz-based periodic table learning tool. The code implements a structured, interactive framework that manages different aspects of the user experience, from data handling to interface interactions. It includes two main features:
 
 1. **Periodic Table Viewer**: View and explore detailed information about chemical elements, their properties, and their positions in the periodic table.
 2. **Periodic Table Game**: A quiz-style game that challenges users to answer questions about element symbols and atomic numbers, promoting learning through play.
