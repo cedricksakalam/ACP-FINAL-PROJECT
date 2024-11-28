@@ -80,10 +80,9 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
     Periodic-Table-Game/
     │
     ├── src/
-    │   ├── PeriodicTableGame.java   # Main game file
-    │   ├── Element.java             # Class representing elements
-    │   ├── StudyArea.java          # Displays the periodic table
-    │   ├── HelpGuide.java          # Provides help and instructions
+    │   ├── gameGUI.py              # Main game file
+    │   ├── periodicTableGUI        # Displays the periodic table
+    │   ├── helpGuide.java          # Provides help and instructions
     │
     └── README.md                   # This README file
 
