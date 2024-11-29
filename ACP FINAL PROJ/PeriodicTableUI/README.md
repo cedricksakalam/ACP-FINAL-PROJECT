@@ -15,8 +15,17 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 ## Application of Python Concepts and Libraries
 
 This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
+1. ### **Libraries**
+   - Lists below are the libraries used to run the program.
+   ```bash
+   tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
+   sqlite3: Provides a lightweight database for persisting user data such as scores and feedback.
+   Pillow: Enhances the GUI by managing image rendering, including animated GIFs, ensuring a polished visual presentation.
+   random: Generates randomized questions to keep the game dynamic and challenging.
+   re: Validates user input, ensuring usernames conform to acceptable standards.
+   ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
 
-1. **Functions**:
+3. **Functions**:
    - Lists below are functions used to run the program.
      ```bash
      init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard and feedback).
@@ -64,7 +73,7 @@ This section explains various Python programming techniques and external librari
 
      UNDER CLASS GameWindow
      __init__(self, username) - Initializes the game window where the user will answer elemental questions.
-     > "Sets up the window's title, geometry, background, and a GIF for the background."
+     > Sets up the window's title, geometry, background, and a GIF for the background.
      > Sets the initial question count and score, and calls create_game_widgets() to generate the game interface.
 
      create_game_widgets() - Creates and arranges the widgets for the game window, where the user will interact with the questions.
@@ -78,7 +87,7 @@ This section explains various Python programming techniques and external librari
      > Compares the user's answer to the correct one and provides a "Correct!" or "Wrong!" message accordingly.
 
      next_question() - Moves to the next question in the game.
-     > "Increases the question count and calls ask_question() to load the next question."
+     > Increases the question count and calls ask_question() to load the next question.
 
      display_final_score() - Displays the final score after all questions are answered.
      > Shows the user’s final score and disables further interactions with the game.
@@ -103,9 +112,36 @@ This section explains various Python programming techniques and external librari
      > Retrieves the top scores from the database and displays them in a Treeview widget.
      > Includes a "Reset Leaderboard" button to clear the leaderboard data from the database.
           reset_leaderboard(self) - Resets the leaderboard by deleting all entries from the database.
-          > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard. 
-2. **Inheritance**:
-   - Although the current implementation doesn’t require inheritance, the design allows for future extensions. For example, additional subclasses could be created to handle different categories of questions or advanced game modes, inheriting core behaviors from the PeriodicTableGame class.
+          > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard.
+     
+3. **OOP-Concepts**:
+   1. **Classes and Objects**
+   Class - A blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from it will have.
+   Object - An instance of a class, representing a specific entity with the structure defined by the class.
+   In the code, the App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
+The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
+2. Encapsulation
+Encapsulation involves bundling data (attributes) and methods (functions) within a class and restricting access to some components. This ensures that data is not directly accessible, improving modularity and security.
+In the code:
+
+Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
+The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
+3. Inheritance
+Inheritance allows a class (child) to inherit attributes and methods from another class (parent), enabling code reuse and extending functionality.
+In the code:
+
+GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
+4. Polymorphism
+Polymorphism allows methods in different classes to have the same name but behave differently based on the object invoking them. It can be achieved through method overriding or overloading.
+In the code:
+
+The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
+5. Abstraction
+Abstraction involves hiding complex implementation details and exposing only what is necessary. This helps reduce complexity for the user.
+In the code:
+
+The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or retrieved.
+The update_background method abstracts the logic f
 
 3. **Polymorphism**:
    - Polymorphism is demonstrated with method overriding. For example, the SubmitButtonListener and NextQuestionButtonListener classes implement the ActionListener interface, providing different behaviors when their respective buttons are clicked.
