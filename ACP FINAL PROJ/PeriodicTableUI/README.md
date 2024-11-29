@@ -25,7 +25,7 @@ This section explains various Python programming techniques and external librari
    re: Validates user input, ensuring usernames conform to acceptable standards.
    ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
 
-3. **Functions**:
+3. ### **Functions**:
    - Lists below are functions used to run the program.
      ```bash
      init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard and feedback).
@@ -114,41 +114,35 @@ This section explains various Python programming techniques and external librari
           reset_leaderboard(self) - Resets the leaderboard by deleting all entries from the database.
           > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard.
      
-3. **OOP-Concepts**:
+3. ### **OOP-Concepts**:
    1. **Classes and Objects**
    Class - A blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from it will have.
    Object - An instance of a class, representing a specific entity with the structure defined by the class.
-   In the code, the App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
-The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
-2. Encapsulation
-Encapsulation involves bundling data (attributes) and methods (functions) within a class and restricting access to some components. This ensures that data is not directly accessible, improving modularity and security.
-In the code:
+   In the code:
+   > The App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
+   > The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
+   
+   2. **Encapsulation**
+   Encapsulation involves bundling data (attributes) and methods (functions) within a class and restricting access to some components. This ensures that data is not directly accessible, improving modularity and security.
+   In the code:
+   > Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
+   > The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
+   
+   3. **Inheritance**
+   Inheritance allows a class (child) to inherit attributes and methods from another class (parent), enabling code reuse and extending functionality.
+   In the code:
+   > GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
 
-Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
-The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
-3. Inheritance
-Inheritance allows a class (child) to inherit attributes and methods from another class (parent), enabling code reuse and extending functionality.
-In the code:
+   4. **Polymorphism**
+   Polymorphism allows methods in different classes to have the same name but behave differently based on the object invoking them. It can be achieved through method overriding or overloading.
+   In the code:
+   > The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
 
-GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
-4. Polymorphism
-Polymorphism allows methods in different classes to have the same name but behave differently based on the object invoking them. It can be achieved through method overriding or overloading.
-In the code:
-
-The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
-5. Abstraction
-Abstraction involves hiding complex implementation details and exposing only what is necessary. This helps reduce complexity for the user.
-In the code:
-
-The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or retrieved.
-The update_background method abstracts the logic f
-
-3. **Polymorphism**:
-   - Polymorphism is demonstrated with method overriding. For example, the SubmitButtonListener and NextQuestionButtonListener classes implement the ActionListener interface, providing different behaviors when their respective buttons are clicked.
-
-4. **Abstraction**:
-   - The Element class serves as an abstract representation of a chemical element, exposing only essential properties like symbol and atomic number, while hiding implementation details.
-   - The PeriodicTableGame class abstracts the game logic behind methods like askQuestion(), checkAnswer(), and displayFinalScore(), simplifying interaction for the user.
+   5. **Abstraction**
+   Abstraction involves hiding complex implementation details and exposing only what is necessary. This helps reduce complexity for the user.
+   In the code:
+   > The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or       retrieved.
+   > The update_background method abstracts the logic for handling GIF frames, so the main logic doesn't deal with animation intricacies.
 
 ---
 
