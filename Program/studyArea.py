@@ -1,5 +1,4 @@
 import tkinter as tk
-from main import GameWindow
 
 class PeriodicTable(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
@@ -11,7 +10,6 @@ class PeriodicTable(tk.Frame):
         self.topLabel.grid(row=0, column=0, columnspan=18)
         self.config(bg='#0C6478')
         
-        # Names of tk.Buttons in column 1
         column1 = [
             ('H', 'Hydrogen', 'Atomic # = 1\nAtomic Weight = 1.01\nState = Gas\nCategory = Alkali Metals'),
             ('Li', 'Lithium', 'Atomic # = 3\nAtomic Weight = 6.94\nState = Solid\nCategory = Alkali Metals'),
@@ -22,11 +20,9 @@ class PeriodicTable(tk.Frame):
             ('Fr', 'Francium', 'Atomic # = 87\nAtomic Weight = 223.00\nState = Solid\nCategory = Alkali Metals')
         ]
 
-        # create all tk.Buttons with a loop
         r = 1
         c = 0
         for b in column1:
-            # Set background color for Hydrogen (H) to be different
             bg_color = "lightblue" if b[0] == 'H' else "pink"
 
             tk.Button(self,
@@ -398,23 +394,18 @@ class PeriodicTable(tk.Frame):
         self.infoLine = tk.Label(self, text="", justify='left')
         self.infoLine.grid(row=1, column=3, columnspan=10, rowspan=4)
         
-
-    # Replaces Label at the top with the name of whichever element tk.Button was pressed
     def name(self, text): 
         self.topLabel.config(text=text)
 
-    # Displays information on the element of whichever element tk.Button was pressed
     def info(self, text): 
         self.infoLine.config(text=text,bg ='#0C6478' , font=("Verdana", 9, "bold"), fg='white')
-        
-# Creates an instance of 'app' class
+    
 def main():
     root = tk.Tk()
     a = PeriodicTable(root)
     root.iconbitmap('C:/Users/ced/ACP FINAL PROJ/PeriodicTableUI/src/Icon.ico')
-    a.grid(row=0, column=0, sticky='nsew') #You forgot to grid your App
+    a.grid(row=0, column=0, sticky='nsew')
     a.mainloop()
 
-# runs main function
 if __name__ == "__main__": 
     main()
