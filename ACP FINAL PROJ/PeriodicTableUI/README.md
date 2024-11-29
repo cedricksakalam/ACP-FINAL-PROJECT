@@ -12,13 +12,98 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 
 ---
 
-## II. Object-Oriented Programming (OOP) Principles
+## Application of Python Concepts and Libraries
 
-This project demonstrates key Object-Oriented Programming principles:
+This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
 
-1. **Encapsulation**:
-   - The Element class encapsulates the properties of a chemical element, such as its symbol and atomic number. These properties are protected by private fields and accessed through public methods to ensure data integrity.
-   - The PeriodicTableGame class manages the game state (e.g., current score, question number) privately, interacting with these states using public methods such as askQuestion() and checkAnswer().
+1. **Functions**:
+   - Lists below are functions used to run the program.
+     ```bash
+     init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard and feedback).
+     > It establishes a connection to the SQLite database (leaderboard.db).
+     > Executes SQL queries to create the tables, ensuring they exist.
+     > The leaderboard table stores username and score, while the feedback table stores username, feedback, and a timestamp.
+
+     add_score(username, score) - Adds a score to the leaderboard for a given user, or updates the score if the user already has a higher score.
+     > Checks if the username already exists in the leaderboard table.
+     > If the username exists, it updates the score if the new score is higher than the existing one.
+     > If the username does not exist, it inserts a new record into the leaderboard table with the provided score.
+
+     get_leaderboard() - Retrieves the top 10 scores from the leaderboard table.
+     > Selects the username and score columns from the leaderboard table.
+     > Orders the results by score in descending order, limiting the results to the top 10.
+
+     reset_leaderboard_db() -  Resets the leaderboard by deleting all entries in the leaderboard table.
+     > Executes a DELETE statement to remove all records from the leaderboard table.
+
+     add_feedback(username, feedback) - Adds feedback from the user to the feedback table.
+     > Validates that the username and feedback are not empty.
+     > Inserts the feedback into the feedback table, with the username and the text of the feedback.
+     > Handles any exceptions that may occur during the insertion.
+
+     get_feedback() - Retrieves all feedback from the feedback table.
+     > Selects username, feedback, and timestamp columns from the feedback table.
+     > Orders the results by the timestamp in descending order.
+
+     UNDER CLASS APP
+     create_widgets() - Creates and arranges the widgets for the main application window.
+     > Sets up labels, entry fields, and buttons for the user interface, allowing users to input their name and start the game.
+     > Also includes the "Help" button that leads to a help window.
+
+     start_game() - Starts the game by validating the username and transitioning to the game window.
+     > Ensures the username entered is valid (contains only alphanumeric characters).
+     > Disables the name entry field and start button after the game begins.
+     > Calls the create_game_window() function to initialize the game.
+
+     help() - Opens the help window by importing and displaying the help guide.
+     > Calls a method from an external help_guide module (assumed to be a different file) to show instructions to the user.
+
+     create_game_window() - Creates and opens the game window where the user will answer questions.
+     > Initializes a new GameWindow instance and starts the game logic there.
+     > Closes the main app window after transitioning to the game window.
+
+     UNDER CLASS GameWindow
+     __init__(self, username) - Initializes the game window where the user will answer elemental questions.
+     > Sets up the window's title, geometry, background, and a GIF for the background.
+     > Sets the initial question count and score, and calls create_game_widgets() to generate the game interface.
+
+     create_game_widgets() - Creates and arranges the widgets for the game window, where the user will interact with the questions.
+     > Sets up labels, buttons, and entry fields for answering questions, displaying feedback, and controlling the game flow (e.g., next question, retry, study area, etc.).
+
+     ask_question() - Asks a new question from the periodic table and displays it in the window.
+     > Chooses a random element and randomly asks either for its symbol or atomic number.
+     > Updates the question label and prepares for the user's input.
+
+     check_answer() - Checks the user's answer and provides feedback.
+     > Compares the user's answer to the correct one and provides a "Correct!" or "Wrong!" message accordingly.
+
+     next_question() - Moves to the next question in the game.
+     > Increases the question count and calls ask_question() to load the next question.
+
+     display_final_score() - Displays the final score after all questions are answered.
+     > Shows the user’s final score and disables further interactions with the game.
+     > Calls add_score() to save the user’s score in the leaderboard.
+     > Enables the "Retry", "Study Area", "View Leaderboards" buttons.
+
+     retry_game() - Allows the user to retry the game.
+     > Saves the current score in the leaderboard.
+     > Closes the current game window and reopens the main app window to start fresh.
+
+     study_area() - Opens the study area for the user to learn more about the periodic table.
+     > Calls a method from the studyArea module to display additional learning resources.
+
+     open_feedback_window() - Opens a window where the user can submit feedback.
+     > Displays a text entry field for the user to enter feedback.
+     > Submits the feedback to the database using the add_feedback() function.
+
+     view_feedback() - Opens a window to display all user feedback.
+     > Displays feedback stored in the database in a Treeview widget with columns for username, feedback, and timestamp.
+
+     show_leaderboard() - Displays the leaderboard showing top scores.
+     > Retrieves the top scores from the database and displays them in a Treeview widget.
+     > Includes a "Reset Leaderboard" button to clear the leaderboard data from the database.
+          reset_leaderboard(self) - Resets the leaderboard by deleting all entries from the database.
+          > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard. 
 2. **Inheritance**:
    - Although the current implementation doesn’t require inheritance, the design allows for future extensions. For example, additional subclasses could be created to handle different categories of questions or advanced game modes, inheriting core behaviors from the PeriodicTableGame class.
 
