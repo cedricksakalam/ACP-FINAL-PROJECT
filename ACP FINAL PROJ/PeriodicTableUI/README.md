@@ -113,6 +113,12 @@ This section explains various Python programming techniques and external librari
      > Includes a "Reset Leaderboard" button to clear the leaderboard data from the database.
           reset_leaderboard(self) - Resets the leaderboard by deleting all entries from the database.
           > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard.
+3. ### **Exception Handling**
+Used extensively (e.g., in database interactions and feedback submission) to manage errors gracefully.
+1. Input Validation: Catching invalid user inputs (e.g., non-numeric values) using try-except blocks.
+2. Database Error Handling: Wrapping database-related operations (e.g., creating tables, executing queries) in try-except blocks to catch sqlite3.DatabaseError.
+3. File Handling Errors: Managing errors when working with files, such as missing files or unsupported file types (e.g., images), using try-except.
+4. General Exception Handling: Catching all unexpected errors with a general Exception block to prevent crashes.
      
 3. ### **OOP-Concepts**:
    1. **Classes and Objects**
@@ -148,19 +154,22 @@ This section explains various Python programming techniques and external librari
 
 ## III. Sustainable Development Goal (SDG) Integration
 
-### SDG 4: Quality Education
+## SDG 4: Quality Education
 
-The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting accessible, interactive learning in chemistry. It contributes to the following:
+The program "Elemental Explorer" aligns primarily with SDG 4: Quality Education, which is centered around ensuring inclusive, equitable, and quality education for all, and promoting lifelong learning opportunities.
 
-1. **Enhancing Learning**:
-   - Offers an engaging way to explore chemistry through games and interactive tools.
-   - Helps users memorize element symbols, atomic numbers, and properties.
+### Contribution to SDG 4: Quality Education
+1. Promoting Access to Knowledge The game is designed to be an educational tool that helps users learn about the periodic table and the elements in chemistry. By offering an engaging and interactive learning experience, it provides a fun alternative to traditional methods of studying science. This is particularly valuable for students who may struggle with rote memorization or find traditional study materials less engaging. As an accessible resource, it opens up new opportunities for learners to engage with complex scientific concepts in a more approachable manner.
 
-2. **Encouraging Curiosity**:
-   - The game and viewer encourage curiosity and deeper exploration of science topics.
+2. Inclusive Learning Environment "Elemental Explorer" is a digital application that can be made available on various platforms, making it accessible to a broad audience. Whether in schools, homes, or community centers, the game can be played by students of different ages and learning levels, ensuring that people from diverse backgrounds can learn. Its interactive and game-based nature can cater to different learning styles—visual learners, auditory learners, and kinesthetic learners alike—ensuring that everyone has the opportunity to grasp the material in a way that suits their preferences.
 
-3. **Inclusive Design**:
-   - Designed to be user-friendly for learners of all ages and educational levels.
+3. Enhancing STEM Education SDG 4 specifically calls for the improvement of education in science, technology, engineering, and mathematics (STEM). By focusing on chemistry and the periodic table, "Elemental Explorer" contributes directly to this goal. It encourages students to explore fundamental scientific concepts in a gamified setting, which may inspire greater interest in STEM fields. In the long term, this can help cultivate a more scientifically literate population that is better equipped to engage with contemporary challenges, such as sustainability, innovation, and technological advancement.
+
+4. Lifelong Learning SDG 4 promotes lifelong learning opportunities for all, and this game can contribute to that by offering a tool that people can continue to use throughout their educational journey. Whether it's students revisiting the content to reinforce their understanding or adults seeking to learn more about chemistry in a relaxed and enjoyable format, the game supports ongoing learning beyond the classroom. This fosters a culture of continuous education, where knowledge is not confined to formal schooling but is accessible at any point in life.
+
+5. Supporting Teachers and Educators The game can also serve as a supplementary educational tool for teachers, providing an additional resource to reinforce concepts taught in the classroom. By integrating the game into curriculum delivery, educators can offer a more dynamic and interactive learning environment. The game could be used in various educational contexts—classroom settings, tutoring, homeschooling, or after-school programs—helping teachers engage students in ways that might be more effective for those who have difficulty with conventional textbook learning.
+
+6. Fostering Critical Thinking and Problem-Solving The game challenges users to recall information, make decisions, and solve problems as they navigate through different challenges related to the periodic table. This promotes critical thinking skills, which are essential not only in STEM fields but also in everyday life. By testing memory and encouraging users to think critically about the relationships between elements, the game fosters deeper cognitive skills that will benefit learners in various contexts.
 
 ---
 
@@ -172,85 +181,52 @@ The Elemental Explorer aligns with **SDG 4: Quality Education** by promoting acc
 
 ### Steps to Run:
 
-1. **Clone or Download the Repository**:
+1. **Step 1: Clone or Download the Project**:
    ```bash
    git clone https://github.com/your-username/periodic-table-game.git
-   cd periodic-table-game
-2. **Compile the Java Files (if not using an IDE):**:
+OR
+
+Download the project files as a ZIP and extract them to your preferred folder.
+
+2. **Step 2: Install Required Libraries**:
+Ensure Python is installed on your system. Then, open your terminal or command prompt and install the required libraries:
    ```bash
-   javac PeriodicTableGame.java
-3. **Run the Game:**:
+   pip install sqlite3
+- This library is used to create tables, databases, and etc..
+- 
+4. **Step 3: Download required Extensions**:
    ```bash
-   java PeriodicTableGame
-- The game window will appear, where you can begin answering questions about chemical elements.
+   Extensions: sqlite viewer
+- This extension helps to view the databases.
 
-### Game Controls:
-- **Submit**: Submit your answer to the current question.
-- **Next Question**: Move to the next question after submitting your answer.
-- **Retry**: Retake the game after viewing your final score.
-- **Study Area**: View the periodic table for reference (opens in a new window).
-- **Help**: View the game instructions and rules.
+5. **Step 4: FollowFolder Structure**
 
----
-
-## V. Folder Structure
 - Follow the Folder Structure to fully utilize the program
   ```bash
-    Periodic-Table-Game/
+    ACP/
     │
-    ├── src/
-    │   ├── gameGUI.py              # Main game file
-    │   ├── periodicTableGUI        # Displays the periodic table
-    │   ├── helpGuide.java          # Provides help and instructions
-    │
+    ├── Project/
+    │   ├── main.py                # Main game file
+    │   ├── studyArea.py           # Displays the periodic table
+    │   ├── help_guide.py          # Provides help and instructions
+    │   ├── bg.gif                 
+    |   ├── helpbg.gif
+    |   ├── Icon.ico
+    |      
     └── README.md                   # This README file
 
+---
+
+## ACKNOWLEDGEMENT
+
+- In God, that I always trust.
+- Ma'am Fatima
+- Random Guy sa Reddit
+- CoF na mas madaming ml kesa gawa
+- kay B-jork
 
 ---
 
-## VI. Key Features
-
-### Periodic Table Game:
-Gameplay:
-- Answer questions on the atomic number and symbol of chemical elements.
-- Questions are randomly selected, providing diverse gameplay each time.
-
-Feedback:
-- Immediate feedback on the correctness of answers.
-- Displays a final score after completing all questions.
-
-### Periodic Table Viewer:
-Interactive Table:
-- View and explore detailed information about elements (atomic number, symbol, weight, and category).
-Educational Information:
-- Categorizes elements by groups and periods, highlighting their properties and states.
-Study Area:
-- Access the periodic table for reference during gameplay.
-Help Guide:
-- Offers detailed instructions for using the application.
-
----
-
-## VII. Explanation of Key Functions
-- ### Explain how the code works and what parts are responsible for running the program.
-  
-  ```bash
-  __init__(self): Initializes the game, setting up the GUI window, layout, and appearance.
-  create_widgets(self): Creates and places all interactive elements in the GUI window.
-  start_game(self): Validates user input (number of questions) and starts the quiz.
-  check_answer(self): Compares user input with the correct answer, updating the score and providing feedback.
-  ask_question(self): Randomly selects a new question and updates the user interface.
-  display_final_score(self): Shows the user’s final score after the quiz and provides options to retry or explore the periodic table.
-  
----
-
-### Thank You for Using Elemental Explorer!
-
-We sincerely appreciate you choosing the Periodic Table Game as your learning tool. We hope it has helped you explore and enjoy the fascinating world of elements. Keep learning and feel free to return anytime for more fun with the periodic table!
-
-### Happy learning!
-
-  
 
 
 
