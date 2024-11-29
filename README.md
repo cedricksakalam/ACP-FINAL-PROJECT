@@ -175,10 +175,6 @@ The program "Elemental Explorer" aligns primarily with SDG 4: Quality Education,
 
 ## IV. Instructions for Running the Program
 
-### Prerequisites:
-- **PJava Development Kit (JDK) version 8** or higher.
-- A compatible IDE or text editor such as IntelliJ IDEA, Eclipse, or Visual Studio Code.
-
 ### Steps to Run:
 
 1. **Step 1: Clone or Download the Project**:
