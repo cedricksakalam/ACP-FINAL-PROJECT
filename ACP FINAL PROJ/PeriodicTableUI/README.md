@@ -4,7 +4,11 @@
 
 ## I. Project Overview
 
-The Periodic Table Game is an interactive educational game designed to test users' knowledge of the periodic table. The game focuses on questions related to the symbols and atomic numbers of chemical elements, providing immediate feedback on the correctness of users' answers. Using Java’s Swing library for the graphical user interface (GUI), the game offers an easy-to-use, engaging interface for learning. It aims to reinforce chemistry concepts in a fun and interactive manner, suitable for students, teachers, and anyone interested in enhancing their knowledge of the periodic table.
+Elemental Explorer is an educational and interactive application designed to make learning the periodic table fun and engaging. It challenges players to test their knowledge of chemical elements through a gamified experience while offering additional features to encourage continuous learning and improvement.
+
+In this program, users can participate in a trivia-style game where they answer questions about element symbols, atomic numbers, and other properties. Elemental Explorer incorporates a database to manage user data, such as tracking high scores on the leaderboard and collecting user feedback. This ensures a seamless experience by saving progress, maintaining rankings, and enabling data-driven improvements to the application. The app also includes a study area for deeper exploration of the periodic table, providing a well-rounded educational tool.
+
+With an intuitive interface, smooth animations, and a focus on accessibility, Elemental Explorer is perfect for students, educators, or anyone interested in chemistry.
 
 ---
 
