@@ -227,7 +227,7 @@ Ensure Python is installed on your system. Then, open your terminal or command p
 
 ---
 
-![App Animation](https://github.com/user-attachments/assets/f8153985-6396-4dde-a20c-795f65d3b2d1)
+![App Animation](https://user-images.githubusercontent.com/username/3f946bf2-dbcd-4fc8-ab84-76dfea839450.gif)
 
 
 
