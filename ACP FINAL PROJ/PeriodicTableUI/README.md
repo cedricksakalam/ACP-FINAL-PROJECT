@@ -227,7 +227,8 @@ Ensure Python is installed on your system. Then, open your terminal or command p
 
 ---
 
-![huhhu](https://github.com/user-attachments/assets/ef5ee0a1-661c-49ee-a92a-dc3758b41d38)
+
+![huhhu](https://github.com/user-attachments/assets/bec24711-34d5-4f3a-a6a4-e1b90d7e97cf)
 
 
 
