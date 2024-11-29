@@ -78,7 +78,7 @@ This section explains various Python programming techniques and external librari
      > Compares the user's answer to the correct one and provides a "Correct!" or "Wrong!" message accordingly.
 
      next_question() - Moves to the next question in the game.
-     > Increases the question count and calls ask_question() to load the next question.
+     > "Increases the question count and calls ask_question() to load the next question."
 
      display_final_score() - Displays the final score after all questions are answered.
      > Shows the user’s final score and disables further interactions with the game.
