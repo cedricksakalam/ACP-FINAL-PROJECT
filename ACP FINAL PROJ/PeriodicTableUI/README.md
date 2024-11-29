@@ -225,10 +225,6 @@ Ensure Python is installed on your system. Then, open your terminal or command p
 - CoF na mas madaming ml kesa gawa
 - kay B-jork
 
----
-
-
-![huhhu](user-images.githubusercontent.com/bec24711-34d5-4f3a-a6a4-e1b90d7e97cf.gif)
 
 
 
