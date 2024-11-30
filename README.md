@@ -72,10 +72,6 @@ This section explains various Python programming techniques and external librari
      > Closes the main app window after transitioning to the game window.
 
      UNDER CLASS GameWindow
-     __init__(self, username) - Initializes the game window where the user will answer elemental questions.
-     > Sets up the window's title, geometry, background, and a GIF for the background.
-     > Sets the initial question count and score, and calls create_game_widgets() to generate the game interface.
-
      create_game_widgets() - Creates and arranges the widgets for the game window, where the user will interact with the questions.
      > Sets up labels, buttons, and entry fields for answering questions, displaying feedback, and controlling the game flow (e.g., next question, retry, study area, etc.).
 
