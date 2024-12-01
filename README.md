@@ -27,6 +27,7 @@ This section explains various Python programming techniques and external librari
 
 3. ### **Functions**:
    - Lists below are functions used to run the program.
+### Database
      ```bash
      init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard and feedback).
      > It establishes a connection to the SQLite database (leaderboard.db).
@@ -54,7 +55,7 @@ This section explains various Python programming techniques and external librari
      > Selects username, feedback, and timestamp columns from the feedback table.
      > Orders the results by the timestamp in descending order.
 
-     UNDER CLASS APP
+### UNDER CLASS APP
      create_widgets() - Creates and arranges the widgets for the main application window.
      > Sets up labels, entry fields, and buttons for the user interface, allowing users to input their name and start the game.
      > Also includes the "Help" button that leads to a help window.
@@ -70,8 +71,8 @@ This section explains various Python programming techniques and external librari
      create_game_window() - Creates and opens the game window where the user will answer questions.
      > Initializes a new GameWindow instance and starts the game logic there.
      > Closes the main app window after transitioning to the game window.
-
-     UNDER CLASS GameWindow
+     
+### UNDER CLASS GameWindow
      create_game_widgets() - Creates and arranges the widgets for the game window, where the user will interact with the questions.
      > Sets up labels, buttons, and entry fields for answering questions, displaying feedback, and controlling the game flow (e.g., next question, retry, study area, etc.).
 
