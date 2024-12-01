@@ -47,7 +47,7 @@ This section explains various Python programming techniques and external librari
 
      get_leaderboard() - Retrieves the top 10 scores from the leaderboard table.
      > Selects the username and score columns from the leaderboard table.
-     > Orders the results by score in descending order, limiting the results to the top 10.
+     > Orders the results by score in descending order, limiting the results to the top 20.
 
      reset_leaderboard_db() -  Resets the leaderboard by deleting all entries in the leaderboard table.
      > Executes a DELETE statement to remove all records from the leaderboard table.
