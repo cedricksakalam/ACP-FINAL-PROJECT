@@ -29,11 +29,17 @@ This section explains various Python programming techniques and external librari
    - Lists below are functions used to run the program.
 ### Database
      ```bash
-     init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard and feedback).
+     init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard, user and, feedback).
      > It establishes a connection to the SQLite database (leaderboard.db).
      > Executes SQL queries to create the tables, ensuring they exist.
      > The leaderboard table stores username and score, while the feedback table stores username, feedback, and a timestamp.
 
+     add_user(username, age):
+     > Adds a new user with the provided username and age to the users table in the database.
+     
+     get_users():
+     > Retrieves all users from the users table and returns a list of tuples, where each tuple contains a user's username and age.
+     
      add_score(username, score) - Adds a score to the leaderboard for a given user, or updates the score if the user already has a higher score.
      > Checks if the username already exists in the leaderboard table.
      > If the username exists, it updates the score if the new score is higher than the existing one.
