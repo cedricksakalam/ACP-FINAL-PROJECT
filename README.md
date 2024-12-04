@@ -175,6 +175,7 @@ Enhancing STEM Education SDG 4 specifically calls for the improvement of educati
 Ensure Python is installed on your system. Then, open your terminal or command prompt and install the required libraries:
    ```bash
    pip install sqlite3
+   pip install Pillow
 - This library is used to create tables, databases, and etc..
 
 4. **Step 3: Download required Extensions**:
