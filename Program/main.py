@@ -371,7 +371,7 @@ class GameWindow(tk.Toplevel):
         self.age = age
         self.question_count = 1
         self.score = 0
-        self.total_questions = 5
+        self.total_questions = 50
 
         self.frames = self.load_gif('C:/Users/ced/Elemental Explorer/Program/bg.gif')
         self.current_frame_index = 0
