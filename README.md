@@ -181,7 +181,7 @@ Ensure Python is installed on your system. Then, open your terminal or command p
    ```bash
    pip install sqlite3
 - This library is used to create tables, databases, and etc..
-- 
+
 4. **Step 3: Download required Extensions**:
    ```bash
    Extensions: sqlite viewer
