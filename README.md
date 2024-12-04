@@ -169,12 +169,7 @@ Enhancing STEM Education SDG 4 specifically calls for the improvement of educati
 
 ### Steps to Run:
 
-1. **Step 1: Clone or Download the Project**:
-   ```bash
-   git clone https://github.com/your-username/periodic-table-game.git
-OR
-
-Download the project files as a ZIP and extract them to your preferred folder.
+1. **Download the project files as a ZIP and extract them to your preferred folder.**
 
 2. **Step 2: Install Required Libraries**:
 Ensure Python is installed on your system. Then, open your terminal or command prompt and install the required libraries:
@@ -184,8 +179,8 @@ Ensure Python is installed on your system. Then, open your terminal or command p
 
 4. **Step 3: Download required Extensions**:
    ```bash
-   Extensions: sqlite viewer
-- This extension helps to view the databases.
+   Extensions: sqlite viewer, PIL
+- This extension helps to view the databases, and utilize images.
 
 5. **Step 4: FollowFolder Structure**
 
