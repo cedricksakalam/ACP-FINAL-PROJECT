@@ -128,30 +128,30 @@ Used extensively (e.g., in database interactions and feedback submission) to man
    Class - A blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from it will have.
    Object - An instance of a class, representing a specific entity with the structure defined by the class.
    In the code:
-   > The App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
-   > The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
+   - The App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
+   - The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
    
    2. **Encapsulation**
    Encapsulation involves bundling data (attributes) and methods (functions) within a class and restricting access to some components. This ensures that data is not directly accessible, improving modularity and security.
    In the code:
-   > Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
-   > The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
+   - Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
+   - The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
    
    3. **Inheritance**
    Inheritance allows a class (child) to inherit attributes and methods from another class (parent), enabling code reuse and extending functionality.
    In the code:
-   > GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
+   - GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
 
    4. **Polymorphism**
    Polymorphism allows methods in different classes to have the same name but behave differently based on the object invoking them. It can be achieved through method overriding or overloading.
    In the code:
-   > The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
+   - The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
 
    5. **Abstraction**
    Abstraction involves hiding complex implementation details and exposing only what is necessary. This helps reduce complexity for the user.
    In the code:
-   > The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or       retrieved.
-   > The update_background method abstracts the logic for handling GIF frames, so the main logic doesn't deal with animation intricacies.
+   - The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or       retrieved.
+   - The update_background method abstracts the logic for handling GIF frames, so the main logic doesn't deal with animation intricacies.
 
 ---
 
