@@ -16,7 +16,7 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 
 This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
 
-**1. ## Libraries**
+### 1. Libraries
    - Lists below are the libraries used to run the program.
       ```bash
       tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
@@ -26,13 +26,13 @@ This section explains various Python programming techniques and external librari
       re: Validates user input, ensuring usernames conform to acceptable standards.
       ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
       
-**2. ## Python Concepts**
-1. **Tkinter (GUI Programming)**
+### 2. Python Concepts
+**Tkinter (GUI Programming)**
    - **Tkinter Basics**: Builds a GUI using Tkinter, the standard library for GUI development in Python. It includes windows, labels, buttons, input fields, and frames.
    - **Event Handling**: Buttons and input fields trigger actions, such as starting the game, submitting answers, or showing feedback, using the `command` attribute to link actions to Python functions.
    - **Layouts**: Utilizes layout management techniques (`pack()`, `place()`, `grid()`) to organize widgets within the window.
 
-2. **Database (SQLite)**
+**Database (SQLite)**
    - **SQLite Database**: Uses the `sqlite3` module to store user scores, feedback, and user details (e.g., username, age) in a lightweight database.
    - **CRUD Operations**: Implements basic CRUD (Create, Read, Update, Delete) operations:
      - **Create**: Defines table structures for leaderboard, feedback, and users using `CREATE TABLE` statements.
@@ -40,45 +40,45 @@ This section explains various Python programming techniques and external librari
      - **Update**: Updates user scores in the leaderboard if a new score is higher.
      - **Delete**: Clears the leaderboard using the `DELETE` statement.
 
-3. **Random Module**
+**Random Module**
    - Uses the `random` module to select elements randomly (e.g., generating random questions) during gameplay with functions like `random.choice()`.
 
-4. **Regular Expressions (Regex)**
+**Regular Expressions (Regex)**
    - Implements input validation using `re.match()` to ensure that usernames contain only alphanumeric characters, preventing invalid symbols or spaces.
 
-5. **Object-Oriented Programming (OOP)**
+**Object-Oriented Programming (OOP)**
    - **Classes and Inheritance**: Defines classes (`App`, `GameWindow`) representing different game windows, inheriting from Tkinter classes (`tk.Tk`, `tk.Toplevel`).
    - **Methods and Attributes**: Methods like `create_widgets()`, `ask_question()`, and `check_answer()` define behaviors, while attributes like `username`, `score`, and `question_count` store game state.
    - **Encapsulation**: Keeps internal states (e.g., `self.username`, `self.age`) private within classes, manipulated through methods.
 
-6. **File I/O**
+**File I/O**
    - **Image Handling**: Uses Pillow (PIL) to load and display GIFs for background animation. The `Image.open()` and `ImageTk.PhotoImage()` methods enable displaying images in Tkinter windows.
    - **File Paths**: Uses absolute file paths for resources like icons and backgrounds (e.g., `C:/Users/ced/Elemental Explorer/Program/Icon.ico`), though it's advisable to handle paths dynamically for deployment.
 
-7. **Error Handling**
+**Error Handling**
    - Implements `try-except` blocks for database operations and other critical functions to handle potential errors (e.g., connection issues) gracefully. Displays error messages using `messagebox.showerror()`.
 
-8. **List and Dictionary Manipulation**
+**List and Dictionary Manipulation**
    - **Dictionaries**: Uses dictionaries (e.g., `ELEMENTS`) to store properties of elements like names, symbols, and atomic numbers, allowing easy access during the game.
    - **Lists**: Manages background animation frames using lists, updating them periodically with `self.after()` to create an animated effect.
 
-9. **Multithreading (Background Updating)**
+**Multithreading (Background Updating)**
    - Uses `after()` for asynchronous updates to the background, allowing continuous changes to frames and creating the illusion of an animated GIF background.
 
-10. **Window Management**
+**Window Management**
     - The application consists of multiple windows:
       - **Main Window (App)**: Manages user input (name, age) and launches the game.
       - **Game Window (GameWindow)**: Displays questions and tracks user interactions.
       - **Feedback and Leaderboard Windows**: Dynamically created using `Toplevel` windows to show additional content without closing the main window.
 
-11. **Advanced Widgets and Customization**
+**Advanced Widgets and Customization**
     - **Treeview**: Uses the `Treeview` widget to display leaderboard scores and feedback in a tabular format, with scrollbars for easy navigation.
     - **Combobox**: Implements a `Combobox` widget for selecting user age, with a limited range of values (1-100).
 
-12. **Dynamic State Updates**
+**Dynamic State Updates**
     - Dynamically updates the state of buttons and input fields based on the game flow. For example, the "Start Game" button is disabled after the game begins, and the "Retry" button is enabled at the end.
 
-13. **Game Logic**
+**Game Logic**
     - **Score Keeping**: Tracks and updates the user’s score by comparing their answers to the correct ones. The score is displayed at the end of the game.
     - **Question Flow**: The game proceeds by asking questions, checking if the answers are correct, and moving to the next question. The game continues until all questions are answered or the game ends.
 
