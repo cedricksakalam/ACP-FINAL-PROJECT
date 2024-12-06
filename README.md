@@ -15,6 +15,7 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 ## Application of Python Concepts and Libraries
 
 This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
+
 **1. Libraries**
    - Lists below are the libraries used to run the program.
       ```bash
