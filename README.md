@@ -71,15 +71,16 @@ This section explains various Python programming techniques and external librari
    - **Feedback and Leaderboard Windows**: Dynamically created using `Toplevel` windows to show additional content without closing the main window.
 
 **Advanced Widgets and Customization**
-    - **Treeview**: Uses the `Treeview` widget to display leaderboard scores and feedback in a tabular format, with scrollbars for easy navigation.
-    - **Combobox**: Implements a `Combobox` widget for selecting user age, with a limited range of values (1-100).
+   - **Treeview**: Uses the `Treeview` widget to display leaderboard scores and feedback in a tabular format, with scrollbars for easy navigation.
+   - **Combobox**: Implements a `Combobox` widget for selecting user age, with a limited range of values (1-100).
 
 **Dynamic State Updates**
-    - Dynamically updates the state of buttons and input fields based on the game flow. For example, the "Start Game" button is disabled after the game begins, and the "Retry" button is enabled at the end.
+   - Dynamically updates the state of buttons and input fields based on the game flow. For example, the "Start Game" button is disabled after the game begins, and the "Retry" button is enabled at the end.
 
 **Game Logic**
-    - **Score Keeping**: Tracks and updates the user’s score by comparing their answers to the correct ones. The score is displayed at the end of the game.
-    - **Question Flow**: The game proceeds by asking questions, checking if the answers are correct, and moving to the next question. The game continues until all questions are answered or the game ends.
+   - **Score Keeping**: Tracks and updates the user’s score by comparing their answers to the correct ones. The score is displayed at the end of the game.
+   
+   - **Question Flow**: The game proceeds by asking questions, checking if the answers are correct, and moving to the next question. The game continues until all questions are answered or the game ends.
 
 ---
 
