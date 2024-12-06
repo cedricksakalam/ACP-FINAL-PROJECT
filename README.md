@@ -66,10 +66,9 @@ This section explains various Python programming techniques and external librari
    - Uses `after()` for asynchronous updates to the background, allowing continuous changes to frames and creating the illusion of an animated GIF background.
 
 **Window Management**
-    - The application consists of multiple windows:
-      - Main Window (App): Manages user input (name, age) and launches the game.
-      - Game Window (GameWindow): Displays questions and tracks user interactions.
-      - Feedback and Leaderboard Windows: Dynamically created using `Toplevel` windows to show additional content without closing the main window.
+   - **Main Window (App)**: Manages user input (name, age) and launches the game.
+   - **Game Window (GameWindow)**: Displays questions and tracks user interactions.
+   - **Feedback and Leaderboard Windows**: Dynamically created using `Toplevel` windows to show additional content without closing the main window.
 
 **Advanced Widgets and Customization**
     - **Treeview**: Uses the `Treeview` widget to display leaderboard scores and feedback in a tabular format, with scrollbars for easy navigation.
