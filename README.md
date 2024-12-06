@@ -24,134 +24,62 @@ This section explains various Python programming techniques and external librari
       random: Generates randomized questions to keep the game dynamic and challenging.
       re: Validates user input, ensuring usernames conform to acceptable standards.
       ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
+      
+**2. Python Concepts**
+1. **Tkinter (GUI Programming)**
+   - **Tkinter Basics**: Builds a GUI using Tkinter, the standard library for GUI development in Python. It includes windows, labels, buttons, input fields, and frames.
+   - **Event Handling**: Buttons and input fields trigger actions, such as starting the game, submitting answers, or showing feedback, using the `command` attribute to link actions to Python functions.
+   - **Layouts**: Utilizes layout management techniques (`pack()`, `place()`, `grid()`) to organize widgets within the window.
 
-3. ### **Functions**:
-   - Lists below are functions used to run the program.
-### Database
-     ```bash
-     init_db() - Initializes the SQLite database and creates the necessary tables (leaderboard, user and, feedback).
-     > It establishes a connection to the SQLite database (leaderboard.db).
-     > Executes SQL queries to create the tables, ensuring they exist.
-     > The leaderboard table stores username and score, while the feedback table stores username, feedback, and a timestamp.
+2. **Database (SQLite)**
+   - **SQLite Database**: Uses the `sqlite3` module to store user scores, feedback, and user details (e.g., username, age) in a lightweight database.
+   - **CRUD Operations**: Implements basic CRUD (Create, Read, Update, Delete) operations:
+     - **Create**: Defines table structures for leaderboard, feedback, and users using `CREATE TABLE` statements.
+     - **Read**: Retrieves data using `SELECT` queries (e.g., `get_users()`, `get_leaderboard()`, `get_feedback()`).
+     - **Update**: Updates user scores in the leaderboard if a new score is higher.
+     - **Delete**: Clears the leaderboard using the `DELETE` statement.
 
-     add_user(username, age):
-     > Adds a new user with the provided username and age to the users table in the database.
-     
-     get_users():
-     > Retrieves all users from the users table and returns a list of tuples, where each tuple contains a user's username and age.
-     
-     add_score(username, score) - Adds a score to the leaderboard for a given user, or updates the score if the user already has a higher score.
-     > Checks if the username already exists in the leaderboard table.
-     > If the username exists, it updates the score if the new score is higher than the existing one.
-     > If the username does not exist, it inserts a new record into the leaderboard table with the provided score.
+3. **Random Module**
+   - Uses the `random` module to select elements randomly (e.g., generating random questions) during gameplay with functions like `random.choice()`.
 
-     get_leaderboard() - Retrieves the top 10 scores from the leaderboard table.
-     > Selects the username and score columns from the leaderboard table.
-     > Orders the results by score in descending order, limiting the results to the top 20.
+4. **Regular Expressions (Regex)**
+   - Implements input validation using `re.match()` to ensure that usernames contain only alphanumeric characters, preventing invalid symbols or spaces.
 
-     reset_leaderboard_db() -  Resets the leaderboard by deleting all entries in the leaderboard table.
-     > Executes a DELETE statement to remove all records from the leaderboard table.
+5. **Object-Oriented Programming (OOP)**
+   - **Classes and Inheritance**: Defines classes (`App`, `GameWindow`) representing different game windows, inheriting from Tkinter classes (`tk.Tk`, `tk.Toplevel`).
+   - **Methods and Attributes**: Methods like `create_widgets()`, `ask_question()`, and `check_answer()` define behaviors, while attributes like `username`, `score`, and `question_count` store game state.
+   - **Encapsulation**: Keeps internal states (e.g., `self.username`, `self.age`) private within classes, manipulated through methods.
 
-     add_feedback(username, feedback) - Adds feedback from the user to the feedback table.
-     > Validates that the username and feedback are not empty.
-     > Inserts the feedback into the feedback table, with the username and the text of the feedback.
-     > Handles any exceptions that may occur during the insertion.
+6. **File I/O**
+   - **Image Handling**: Uses Pillow (PIL) to load and display GIFs for background animation. The `Image.open()` and `ImageTk.PhotoImage()` methods enable displaying images in Tkinter windows.
+   - **File Paths**: Uses absolute file paths for resources like icons and backgrounds (e.g., `C:/Users/ced/Elemental Explorer/Program/Icon.ico`), though it's advisable to handle paths dynamically for deployment.
 
-     get_feedback() - Retrieves all feedback from the feedback table.
-     > Selects username, feedback, and timestamp columns from the feedback table.
-     > Orders the results by the timestamp in descending order.
+7. **Error Handling**
+   - Implements `try-except` blocks for database operations and other critical functions to handle potential errors (e.g., connection issues) gracefully. Displays error messages using `messagebox.showerror()`.
 
-### UNDER CLASS APP
-     create_widgets() - Creates and arranges the widgets for the main application window.
-     > Sets up labels, entry fields, and buttons for the user interface, allowing users to input their name and start the game.
-     > Also includes the "Help" button that leads to a help window.
+8. **List and Dictionary Manipulation**
+   - **Dictionaries**: Uses dictionaries (e.g., `ELEMENTS`) to store properties of elements like names, symbols, and atomic numbers, allowing easy access during the game.
+   - **Lists**: Manages background animation frames using lists, updating them periodically with `self.after()` to create an animated effect.
 
-     start_game() - Starts the game by validating the username and transitioning to the game window.
-     > Ensures the username entered is valid (contains only alphanumeric characters).
-     > Disables the name entry field and start button after the game begins.
-     > Calls the create_game_window() function to initialize the game.
+9. **Multithreading (Background Updating)**
+   - Uses `after()` for asynchronous updates to the background, allowing continuous changes to frames and creating the illusion of an animated GIF background.
 
-     help() - Opens the help window by importing and displaying the help guide.
-     > Calls a method from an external help_guide module (assumed to be a different file) to show instructions to the user.
+10. **Window Management**
+    - The application consists of multiple windows:
+      - **Main Window (App)**: Manages user input (name, age) and launches the game.
+      - **Game Window (GameWindow)**: Displays questions and tracks user interactions.
+      - **Feedback and Leaderboard Windows**: Dynamically created using `Toplevel` windows to show additional content without closing the main window.
 
-     create_game_window() - Creates and opens the game window where the user will answer questions.
-     > Initializes a new GameWindow instance and starts the game logic there.
-     > Closes the main app window after transitioning to the game window.
-     
-### UNDER CLASS GameWindow
-     create_game_widgets() - Creates and arranges the widgets for the game window, where the user will interact with the questions.
-     > Sets up labels, buttons, and entry fields for answering questions, displaying feedback, and controlling the game flow (e.g., next question, retry, study area, etc.).
+11. **Advanced Widgets and Customization**
+    - **Treeview**: Uses the `Treeview` widget to display leaderboard scores and feedback in a tabular format, with scrollbars for easy navigation.
+    - **Combobox**: Implements a `Combobox` widget for selecting user age, with a limited range of values (1-100).
 
-     ask_question() - Asks a new question from the periodic table and displays it in the window.
-     > Chooses a random element and randomly asks either for its symbol or atomic number.
-     > Updates the question label and prepares for the user's input.
+12. **Dynamic State Updates**
+    - Dynamically updates the state of buttons and input fields based on the game flow. For example, the "Start Game" button is disabled after the game begins, and the "Retry" button is enabled at the end.
 
-     check_answer() - Checks the user's answer and provides feedback.
-     > Compares the user's answer to the correct one and provides a "Correct!" or "Wrong!" message accordingly.
-
-     next_question() - Moves to the next question in the game.
-     > Increases the question count and calls ask_question() to load the next question.
-
-     display_final_score() - Displays the final score after all questions are answered.
-     > Shows the user’s final score and disables further interactions with the game.
-     > Calls add_score() to save the user’s score in the leaderboard.
-     > Enables the "Retry", "Study Area", "View Leaderboards" buttons.
-
-     retry_game() - Allows the user to retry the game.
-     > Saves the current score in the leaderboard.
-     > Closes the current game window and reopens the main app window to start fresh.
-
-     study_area() - Opens the study area for the user to learn more about the periodic table.
-     > Calls a method from the studyArea module to display additional learning resources.
-
-     open_feedback_window() - Opens a window where the user can submit feedback.
-     > Displays a text entry field for the user to enter feedback.
-     > Submits the feedback to the database using the add_feedback() function.
-
-     view_feedback() - Opens a window to display all user feedback.
-     > Displays feedback stored in the database in a Treeview widget with columns for username, feedback, and timestamp.
-
-     show_leaderboard() - Displays the leaderboard showing top scores.
-     > Retrieves the top scores from the database and displays them in a Treeview widget.
-     > Includes a "Reset Leaderboard" button to clear the leaderboard data from the database.
-          reset_leaderboard(self) - Resets the leaderboard by deleting all entries from the database.
-          > Prompts the user for confirmation and then calls reset_leaderboard_db() to clear the leaderboard.
-3. ### **Exception Handling**
-Used extensively (e.g., in database interactions and feedback submission) to manage errors gracefully.
-1. Input Validation: Catching invalid user inputs (e.g., non-numeric values) using try-except blocks.
-2. Database Error Handling: Wrapping database-related operations (e.g., creating tables, executing queries) in try-except blocks to catch sqlite3.DatabaseError.
-3. File Handling Errors: Managing errors when working with files, such as missing files or unsupported file types (e.g., images), using try-except.
-4. General Exception Handling: Catching all unexpected errors with a general Exception block to prevent crashes.
-     
-3. ### **OOP-Concepts**:
-   1. **Classes and Objects**
-   Class - A blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from it will have.
-   Object - An instance of a class, representing a specific entity with the structure defined by the class.
-   In the code:
-   - The App class is a template for the main application window. When the script runs, an instance of this class (app) is created, which represents the main application object.
-   - The GameWindow class is used to define a window for the game. An object of this class is created when a game session starts.
-   
-   2. **Encapsulation**
-   Encapsulation involves bundling data (attributes) and methods (functions) within a class and restricting access to some components. This ensures that data is not directly accessible, improving modularity and security.
-   In the code:
-   - Attributes like self.username, self.question_count, and self.score in GameWindow are encapsulated within the class. These attributes can only be modified using methods of the class.
-   - The database interaction functions like add_score and get_leaderboard encapsulate the logic for interacting with the database, preventing direct access.
-   
-   3. **Inheritance**
-   Inheritance allows a class (child) to inherit attributes and methods from another class (parent), enabling code reuse and extending functionality.
-   In the code:
-   - GameWindow inherits from tk.Toplevel, which is a class in the tkinter library for creating secondary windows. This inheritance allows GameWindow to use and extend the functionality of Toplevel.
-
-   4. **Polymorphism**
-   Polymorphism allows methods in different classes to have the same name but behave differently based on the object invoking them. It can be achieved through method overriding or overloading.
-   In the code:
-   - The load_gif method is defined in both App and GameWindow. While the method name is the same, its behavior depends on the context (i.e., whether it's being called in App or GameWindow).
-
-   5. **Abstraction**
-   Abstraction involves hiding complex implementation details and exposing only what is necessary. This helps reduce complexity for the user.
-   In the code:
-   - The database initialization logic (init_db) and other database interaction methods (add_score, get_leaderboard) abstract away the details of SQL queries. The main program doesn't need to know how data is stored or       retrieved.
-   - The update_background method abstracts the logic for handling GIF frames, so the main logic doesn't deal with animation intricacies.
+13. **Game Logic**
+    - **Score Keeping**: Tracks and updates the user’s score by comparing their answers to the correct ones. The score is displayed at the end of the game.
+    - **Question Flow**: The game proceeds by asking questions, checking if the answers are correct, and moving to the next question. The game continues until all questions are answered or the game ends.
 
 ---
 
