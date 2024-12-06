@@ -16,7 +16,7 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 
 This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
 
-**1. Libraries**
+**1. ## Libraries**
    - Lists below are the libraries used to run the program.
       ```bash
       tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
@@ -26,7 +26,7 @@ This section explains various Python programming techniques and external librari
       re: Validates user input, ensuring usernames conform to acceptable standards.
       ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
       
-**2. Python Concepts**
+**2. ## Python Concepts**
 1. **Tkinter (GUI Programming)**
    - **Tkinter Basics**: Builds a GUI using Tkinter, the standard library for GUI development in Python. It includes windows, labels, buttons, input fields, and frames.
    - **Event Handling**: Buttons and input fields trigger actions, such as starting the game, submitting answers, or showing feedback, using the `command` attribute to link actions to Python functions.
