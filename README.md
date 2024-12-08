@@ -123,7 +123,7 @@ Ensure Python is installed on your system. Then, open your terminal or command p
    │   ├── classes.py             # Handles core class definitions
    │   ├── elements.py            # Manages element-related functionalities
    │   ├── db.py                  # Handles database interactions
-   │   ├── images/
+   │   └── images/
    │       ├── bg.gif             # Background image for the game
    │       └── Icon.ico           # Application icon
    │
