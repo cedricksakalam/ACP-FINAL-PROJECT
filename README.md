@@ -124,8 +124,8 @@ Ensure Python is installed on your system. Then, open your terminal or command p
    │   ├── elements.py            # Manages element-related functionalities
    │   ├── db.py                  # Handles database interactions
    │   ├── images/
-   │   │   ├── bg.gif             # Background image for the game
-   │   │   └── Icon.ico           # Application icon
+   │       ├── bg.gif             # Background image for the game
+   │       └── Icon.ico           # Application icon
    │
    └── README.md                  # Project documentation
 
