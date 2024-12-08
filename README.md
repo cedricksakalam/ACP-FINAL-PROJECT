@@ -18,7 +18,6 @@ This section explains various Python programming techniques and external librari
 
 ### 1. Libraries
    - Lists below are the libraries used to run the program.
-      ```bash
       tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
       sqlite3: Provides a lightweight database for persisting user data such as scores and feedback.
       Pillow: Enhances the GUI by managing image rendering, including animated GIFs, ensuring a polished visual presentation.
