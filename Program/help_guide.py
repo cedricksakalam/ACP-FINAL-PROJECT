@@ -42,7 +42,7 @@ class Help(tk.Tk):
     def setup_window(self):
         self.title("Elemental Explorer")
         self.geometry("1920x1080")
-        self.iconbitmap('C:/Users/ced/Elemental Explorer/Program/Icon.ico') 
+        self.iconbitmap('C:/Users/ced/Elemental Explorer/Program/images/Icon.ico') 
         self.config(bg='#485540')
 
     def create_widgets(self):
@@ -88,7 +88,7 @@ class Help(tk.Tk):
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
     def create_gif(self):
-        self.gif_path = "C:/Users/ced/Elemental Explorer/Program/helpbg.gif"
+        self.gif_path = "C:/Users/ced/Elemental Explorer/Program/images/helpbg.gif"
         self.gif_image = Image.open(self.gif_path)
 
         self.frames = []
@@ -123,7 +123,7 @@ class Help(tk.Tk):
     def back_to_game(self):
 
         self.destroy()
-        from main import App
+        from classes import App
         App()
 
 if __name__ == "__main__":
