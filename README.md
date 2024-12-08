@@ -130,7 +130,6 @@ Ensure Python is installed on your system. Then, open your terminal or command p
    └── README.md                  # Project documentation
 
 
-
 ---
 
 For more visual presentation just click this link!! https://drive.google.com/file/d/1mB5Ba0ZUOOzuXylhpXbm-Y68csisAegX/view?usp=sharing
