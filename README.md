@@ -106,9 +106,10 @@ Ensure Python is installed on your system. Then, open your terminal or command p
    pip install Pillow
 - This library is used to create tables, databases, and etc..
 
-4. **Step 3: Download required Extensions**:
+4. **Step 3: Download required Extensions and Library**:
    ```bash
-   Extensions: sqlite viewer, PIL
+   Extensions: sqlite viewer
+   Library: Pillow
 - This extension helps to view the databases, and utilize images.
 
 5. **Step 4: FollowFolder Structure**
