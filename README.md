@@ -115,14 +115,21 @@ Ensure Python is installed on your system. Then, open your terminal or command p
 
 - Follow the Folder Structure to fully utilize the program
   ```bash
-    ACP/
-    ├── Project/
-    │   ├── main.py                # Main game file
-    │   ├── studyArea.py           # Displays the periodic table
-    │   ├── help_guide.py          # Provides help and instructions
-    │   ├── bg.gif                 # Background image for the game
-    │   └── Icon.ico               # Application icon
-    └── README.md                  # This README file
+    ACP - Final Project
+   ├── Project/
+   │   ├── main.py                # Main game file
+   │   ├── studyArea.py           # Displays the periodic table
+   │   ├── help_guide.py          # Provides help and instructions
+   │   ├── classes.py             # Handles core class definitions
+   │   ├── elements.py            # Manages element-related functionalities
+   │   ├── db.py                  # Handles database interactions
+   │   ├── images/
+   │   │   ├── bg.gif             # Background image for the game
+   │   │   └── Icon.ico           # Application icon
+   │
+   └── README.md                  # Project documentation
+
+
 
 ---
 
