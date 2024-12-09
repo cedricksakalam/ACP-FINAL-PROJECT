@@ -17,12 +17,12 @@ With an intuitive interface, smooth animations, and a focus on accessibility, El
 This section explains various Python programming techniques and external libraries were utilized to build and enhance the functionality of the project.
 
 ### 1. Libraries
-      - tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
-      - sqlite3: Provides a lightweight database for persisting user data such as scores and feedback.
-      - Pillow: Enhances the GUI by managing image rendering, including animated GIFs, ensuring a polished visual presentation.
-      - random: Generates randomized questions to keep the game dynamic and challenging.
-      - re: Validates user input, ensuring usernames conform to acceptable standards.
-      - ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
+- tkinter: Implements the graphical user interface, creating visually structured windows, buttons, labels, and other elements for the application.
+- sqlite3: Provides a lightweight database for persisting user data such as scores and feedback.
+- Pillow: Enhances the GUI by managing image rendering, including animated GIFs, ensuring a polished visual presentation.
+- random: Generates randomized questions to keep the game dynamic and challenging.
+- re: Validates user input, ensuring usernames conform to acceptable standards.
+- ttk: Used for advanced widgets like Treeview to display leaderboard and feedback tables.
       
 ### 2. Python Concepts
 **Tkinter (GUI Programming)**
