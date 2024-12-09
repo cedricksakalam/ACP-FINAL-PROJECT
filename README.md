@@ -32,7 +32,7 @@ This section explains various Python programming techniques and external librari
 
 **Database (SQLite)**
    - **SQLite Database**: Uses the `sqlite3` module to store user scores, feedback, and user details (e.g., username, age) in a lightweight database.
-   - 
+     
 **Random Module**
    - Uses the `random` module to select elements randomly (e.g., generating random questions) during gameplay with functions like `random.choice()`.
 
