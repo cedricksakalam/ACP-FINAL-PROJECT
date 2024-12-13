@@ -46,14 +46,14 @@ def add_user(username, age):
     conn.commit()
     conn.close()
 
-def add_user(username, age):
+def get_users():
     conn = sqlite3.connect("PeriodicGame.db")
     cursor = conn.cursor()
-
-    # Insert user into the users table
-    cursor.execute("INSERT INTO users (username, age) VALUES (?, ?)", (username, age))
+    
+    cursor.execute("SELECT username, age FROM user)
     conn.commit()
     conn.close()
+
 
 #Retrieve the leaderboard
 def get_leaderboard():
