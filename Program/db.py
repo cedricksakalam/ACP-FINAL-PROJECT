@@ -46,15 +46,6 @@ def add_user(username, age):
     conn.commit()
     conn.close()
 
-# Retrieve all users from the users table
-def get_users():
-    conn = sqlite3.connect("PeriodicGame.db")
-    cursor = conn.cursor()
-    cursor.execute("SELECT username, age FROM users")
-    rows = cursor.fetchall()
-    conn.close()
-    return rows
-
 #Retrieve the leaderboard
 def get_leaderboard():
     conn = sqlite3.connect("PeriodicGame.db")
